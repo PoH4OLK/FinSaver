@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.finsaver">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BROADCAST_CLOCK_ALARMS" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon_logo_finance_saver"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/FinanceSaver">
+
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".family.AddFamilyMemberActivity" />
+        <activity android:name=".transactions.TransactionsActivity" />
+        <activity android:name=".transactions.AddTransactionActivity" />
+        <activity android:name=".MainMenuActivity"/>
+        <activity android:name=".auth.RegisterActivity" />
+        <activity android:name=".auth.LoginActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".settings.ProfileSettingsActivity"
+            android:label="Profile Settings"/>
+
+        <activity
+            android:name=".transactions.UpdateTransactionActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".settings.UpdateProfileActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".family.MemberTransactionsActivity"
+            android:parentActivityName=".MainMenuActivity"/>
+
+        <receiver android:name=".notifications.NotificationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.finsaver.NOTIFICATION_UPDATE" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="com.example.finsaver.NEW_NOTIFICATION" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

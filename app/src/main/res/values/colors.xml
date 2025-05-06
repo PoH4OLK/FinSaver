@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Основные цвета -->
+    <color name="primary">#161E35</color>
+    <color name="primary_dark">#3700B3</color>
+    <color name="primary_light">#BB86FC</color>
+    <color name="accent">#03DAC5</color>
+
+    <!-- Текст -->
+    <color name="text_primary">#161E35</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_white">#FFFFFF</color>
+
+    <!-- Фоны -->
+    <color name="background">#FAFAFA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="error">#B00020</color>
+    <color name="blocks">#EFE7F6</color>
+
+    <!-- Транзакции -->
+    <color name="income">#2E7D32</color> <!-- Зеленый для доходов -->
+    <color name="expense">#C62828</color> <!-- Красный для расходов -->
+
+    <!-- Статус бар и навигация -->
+    <color name="status_bar">#3700B3</color>
+    <color name="navigation_bar">#000000</color>
+
+    <!-- Дополнительные цвета -->
+    <color name="gray">#9E9E9E</color>
+    <color name="light_gray">#E0E0E0</color>
+    <color name="divider">#BDBDBD</color>
+
+    <!-- Цвета карточек в главном меню -->
+    <color name="income_background">#E8F5E9</color>
+    <color name="expense_background">#FFEBEE</color>
+    <color name="family_background">#E3F2FD</color>
+
+    <!-- Иконки -->
+    <color name="income_icon">#2E7D32</color>
+    <color name="expense_icon">#C62828</color>
+    <color name="family_icon">#1976D2</color>
+    <color name="about_icon">#7B1FA2</color>
+
+    <!-- Текст на карточках -->
+    <color name="income_text">#2E7D32</color>
+    <color name="expense_text">#C62828</color>
+    <color name="family_text">#1976D2</color>
+    <color name="about_text">#7B1FA2</color>
+
+    <!-- Кнопки -->
+    <color name="button_text">#FFFFFF</color>
+    <color name="button_outline">#6200EE</color>
+
+    <!-- Уведомления -->
+    <color name="accept">#2E7D32</color>
+    <color name="decline">#C62828</color>
+    <color name="notification_info">#2196F3</color>
+    <color name="notification_success">#4CAF50</color>
+    <color name="notification_warning">#FF9800</color>
+    <color name="notification_error">#F44336</color>
+    <color name="yellow_notification">#FFD600</color> <!-- Яркий желтый -->
+    <color name="yellow_dark">#FFA000</color> <!-- Темно-желтый для контраста -->
+
+    <!-- Кнопки -->
+    <color name="light_yellow">#FFE082</color>
+    <color name="execute_button_text">#161E35</color>
+
+    <!-- Градиенты -->
+    <color name="gradient_start">#6200EE</color>
+    <color name="gradient_end">#03DAC5</color>
+    <color name="delete_user">#FF000000</color>
+    <color name="red">#C62828</color>
+    <color name="block">#EFE7F6</color>
+</resources>

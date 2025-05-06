@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">Finance saver</string>
+
+    <!-- Авторизация -->
+    <string name="login_title">Логин</string>
+    <string name="username_hint">Имя</string>
+    <string name="password_hint">Пароль</string>
+    <string name="login_button">Авторизоваться</string>
+    <string name="register_button">Зарегистрироваться</string>
+
+    <!-- Регистрация -->
+    <string name="register_title">Регистрация</string>
+    <string name="email_hint">Почта</string>
+    <string name="full_name_hint">Полное имя</string>
+    <string name="register_button_text">Зарегистрироваться</string>
+
+    <!-- Главное меню -->
+    <string name="add_transaction">Добавить финансы</string>
+    <string name="view_transactions">Просмотр финансов</string>
+    <string name="add_family_member">Добавить в группу</string>
+    <string name="about">О программе</string>
+    <string name="error_loading_family">Ошибка загрузги семейной группы</string>
+
+    <!-- Добавить в группу -->
+    <string name="add_family_title">Добавить в группу</string>
+    <string name="username_to_add_hint">Имя пользователя</string>
+    <string name="send_request_button">Отправить запрос</string>
+
+    <!-- Финансы -->
+    <string name="add_transaction_title">Добавление финансов</string>
+    <string name="amount_hint">Сумма</string>
+    <string name="description_hint">Описание</string>
+    <string name="type">Тип</string>
+    <string name="transaction_type_income">Поступление</string>
+    <string name="transaction_type_expense">Расходы</string>
+    <string name="category_hint">Категория</string>
+    <string name="save_button">Сохранить</string>
+
+    <string name="family_members">Группа</string>
+    <string name="no_family_members">В группе нет участников</string>
+    <string name="no_invitations_found">Приглашений не найдено</string>
+    <string name="family_invitations">Приглашение в группу</string>
+
+    <!-- О программе -->
+    <string name="about_title">О программе</string>
+    <string name="version">Версия %s</string>
+    <string name="version_loading">Загрузка версии...</string>
+    <string name="version_unknown">Версия неизвестна</string>
+    <string name="app_description">Finance saver - удобное приложение для учета личных финансов и семейного бюджета. Помогает контролировать доходы и расходы, анализировать траты и планировать бюджет.</string>
+    <string name="developer_info">Разработчик: Коновалов Сергей БВТ2152</string>
+    <string name="contact_info">Контакты: s.d.konovalov@edu.mtuci.ru</string>
+
+    <!-- Для типа транзакции -->
+    <string-array name="transaction_types">
+        <item>Поступление</item>
+        <item>Расходы</item>
+    </string-array>
+
+    <string-array name="transaction_filters">
+        <item>Все</item>
+        <item>Поступления</item>
+        <item>Расходы</item>
+        <item>За неделю</item>
+        <item>За месяц</item>
+    </string-array>
+
+    <string-array name="transaction_sort_options">
+        <item>По дате (новые)</item>
+        <item>По дате (старые)</item>
+        <item>По сумме (возр.)</item>
+        <item>По сумме (убыв.)</item>
+    </string-array>
+
+    <string-array name="transaction_filters_values">
+        <item>all</item>
+        <item>income</item>
+        <item>expense</item>
+        <item>last_week</item>
+        <item>last_month</item>
+    </string-array>
+
+    <string-array name="transaction_sort_values">
+        <item>date_desc</item>
+        <item>date_asc</item>
+        <item>amount_asc</item>
+        <item>amount_desc</item>
+    </string-array>
+
+    <!-- Категории -->
+    <string-array name="transaction_categories">
+        <item name="food">Еда</item>
+        <item name="transport">Транспорт</item>
+        <item name="utilities">Коммунальные услуги</item>
+        <item name="entertainment">Развлечение</item>
+        <item name="salary">Зарплата</item>
+        <item name="other">Другое</item>
+    </string-array>
+
+    <string name="expand_collapse">Развернуть/свернуть</string>
+
+    <!-- Настроки -->
+    <string name="settings">Настройки</string>
+    <string name="update_profile">Изменить профиль</string>
+    <string name="change_theme">Ночная тема</string>
+    <string name="logout">Выйти из профиля</string>
+
+    <!-- Уведомления -->
+    <string name="accept">Принять</string>
+    <string name="decline">Отклонить</string>
+    <string name="notification_title">Новое уведомление</string>
+    <string name="invitation_message">Приглашение в семейную группу</string>
+    <string name="btnFamilyGroupName">Приглашения</string>
+    <string name="finance_saver">Finance Saver</string>
+    <string name="income">Пост.:</string>
+    <string name="extense">Расх.:</string>
+    <string name="message_to_user">Сообщение</string>
+    <string name="remember_me">Запомнить меня</string>
+    <string name="create_group">Создать группу</string>
+    <string name="disband_group">Расформировать группу</string>
+    <string name="user_login">Имя пользователя:</string>
+    <string name="user_fullName">Полное имя пользователя:</string>
+    <string name="insert_transactions">Добавление финансов</string>
+    <string name="update_transactions">Изменение финансов</string>
+    <string name="update">Изменить</string>
+    <string name="updating_profile">Изменение профиля</string>
+</resources>

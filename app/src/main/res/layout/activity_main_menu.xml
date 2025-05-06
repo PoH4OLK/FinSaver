@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/background"/>
+
+        <!-- Текст приветсвтвия -->
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="10dp"
+            android:textColor="@color/text_primary"
+            android:padding="16dp"
+            android:textStyle="bold"/>
+
+        <!-- Карточка участников группы -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="8dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/blocks">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/tvFamilyMembersTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/family_members"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                    <ImageView
+                        android:id="@+id/ivExpandCollapse"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/icon_expand_less"
+                        android:contentDescription="@string/expand_collapse"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llFamilyContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+                    <!-- Отображение пустой группы -->
+                    <TextView
+                        android:id="@+id/tvEmptyFamily"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_family_members"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:layout_margin="8dp"
+                        android:textColor="@color/text_secondary"/>
+
+
+                    <!-- Список группы -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvFamilyMembers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"/>
+
+                    <!-- Уведомления -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp">
+
+                        <!-- Кнопка создания группы -->
+                        <Button
+                            android:id="@+id/btnCreateGroup"
+                            android:layout_width="wrap_content"
+                            style="@style/ActionButton"
+                            android:layout_height="wrap_content"
+                            android:text="@string/create_group"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginEnd="8dp"/>
+
+                        <!-- Кнопка расформирования группы -->
+                        <Button
+                            android:id="@+id/btnDisbandGroup"
+                            style="@style/ActionButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/disband_group"
+                            android:layout_toEndOf="@id/btnCreateGroup"
+                            android:layout_marginEnd="8dp"/>
+
+                        <!-- Индикатор уведомлений -->
+                        <ImageView
+                            android:id="@+id/ivNotificationIndicator"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignTop="@id/btnFamilyGroup"
+                            android:layout_toStartOf="@id/btnFamilyGroup"
+                            android:layout_marginEnd="4dp"
+                            android:src="@drawable/icon_notification_indicator"
+                            android:visibility="gone"/>
+
+                        <!-- Кнопка уведомлений -->
+                        <Button
+                            android:id="@+id/btnFamilyGroup"
+                            style="@style/ActionButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/btnFamilyGroupName"
+                            android:layout_alignParentEnd="true"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:layout_margin="16dp"
+            android:alignmentMode="alignMargins">
+
+            <!-- Добавить финансы -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnAddTransaction"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/income_background"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/icon_bill"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_transaction"
+                        android:textColor="@color/income_text"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Просмотр финансов -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnViewTransactions"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/income_background"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/icon_transactions" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/view_transactions"
+                        android:textColor="@color/income_text"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Добавить в группу -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnAddFamilyMember"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/income_background"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/icon_add_to_group" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_family_member"
+                        android:textColor="@color/income_text"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnProfileSettings"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/family_background"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/icon_settings"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Настройки"
+                        android:textColor="@color/family_text"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>
