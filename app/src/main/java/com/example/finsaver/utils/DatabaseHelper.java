@@ -14,8 +14,8 @@ import java.util.List;
 public class DatabaseHelper {
     private static final String IP = "";
     private static final String JDBC_URL = "jdbc:jtds:sqlserver://" + IP + ":1433/FinSaverDB";
-    private static final String USER = "dbAgent";
-    private static final String PASS = "admin";
+    private static final String USER = "";
+    private static final String PASS = "";
 
     static {
         try {
